@@ -1,0 +1,115 @@
+.sign-in-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(84deg, rgba(115, 7, 66, 1) 0%, rgba(230, 36, 154, 1) 0%, rgba(11, 207, 212, 1) 100%, rgba(94, 94, 94, 1) 100%);
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.sign-in-box:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.sign-in-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  /* Adjusted for space below the sign-in box */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 250px;
+  /* height: 250px; */
+}
+
+.dropdown-menu::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  /* Adjust as needed */
+  right: 15px;
+  /* Position it relative to the dropdown */
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  /* The triangle color matches the dropdown */
+}
+
+
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu ul li {
+  padding: 10px 20px;
+  height: 45px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 19px;
+
+}
+
+.dropdown-menu ul li:hover {
+
+  background-color: #f8f8f8;
+  border: 2px dotted black;
+  border-radius: 10px;
+
+}
+
+
+
+.dropdown-menu ul li:last-child {
+  color: rgb(212, 0, 0);
+  font-weight: bold;
+}
+
+
+.move-right {
+  margin-right: 20px;
+  min-width: 20px;
+}
+
+.log-out-modal {
+  background: linear-gradient(84deg, rgba(115, 7, 66, 1) 0%, rgba(230, 36, 154, 1) 0%, rgba(11, 207, 212, 1) 100%, rgba(94, 94, 94, 1) 100%);
+
+  color: white;
+
+}
+
+.modal-para {
+  font-size: 18px;
+  /* font-weight: 500; */
+
+}
+
+.danger-danger-btn {
+  background-color: red;
+}
+
+.cancel-btn {
+  background-color: black;
+}
+
+.danger-text {
+  color: rgb(41, 38, 38);
+}

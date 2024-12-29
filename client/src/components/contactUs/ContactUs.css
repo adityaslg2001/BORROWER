@@ -1,0 +1,46 @@
+.contactus-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Full height of the viewport */
+    background-color: #000;
+    /* Black background */
+    color: #fff;
+    /* White text */
+    font-family: 'Arial', sans-serif;
+}
+
+.contactus-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-decoration: underline;
+    /* text-decoration: wavy; */
+}
+
+.contactus-container ul {
+    list-style: none;
+    /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    line-height: 2;
+    /* Increase line height */
+}
+
+.contactus-container li {
+    display: flex;
+    align-items: center;
+    /* Align icon and text */
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.contactus-container li i {
+    margin-right: 10px;
+    /* Space between icon and text */
+    font-size: 1.5rem;
+}

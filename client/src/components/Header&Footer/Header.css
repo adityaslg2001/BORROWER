@@ -1,0 +1,214 @@
+.header{
+    height: 50px;
+    
+}
+.nav-clr{
+    background-color: black !important;
+    color: white;
+}
+.left-space{
+    margin-left: 3rem;
+}
+.whites li a{
+    color:#fcfcfc;
+}
+.center-1{
+    background-color: black;
+    z-index: 1;
+    color: white;
+}
+
+.make-big{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 150px;
+}
+
+
+.img-contain{
+    /* width: 80%;
+    height: 60px; */
+    /* object-fit: contain; */
+    font-family: sans-serif;
+    font-size: 35px;
+    letter-spacing: 1px;
+    margin: 0px;
+
+}
+
+.btn-dark{
+  padding: 10px 20px;
+}
+
+footer {
+    width: 100%;
+    background: rgb(115,7,66);
+background: linear-gradient(84deg, rgba(115,7,66,1) 0%, rgba(230,36,154,1) 0%, rgba(11,207,212,1) 100%, rgba(94,94,94,1) 100%);
+
+   color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: relative; /* Default position */
+  }
+.container1{
+    height: 100vh;
+}
+html, body {
+    height: 100%;
+  }
+  
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  
+  footer {
+    margin-top: auto; /* Ensures the footer stays at the bottom */
+    
+  }
+  .footer-container{
+    height: 3vh;
+  }
+
+  .flex-me{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+  }
+  .flex-me input{
+    width: 500px;
+  }
+
+/* <------------------------ Dropdown from here------------------------------> */
+/* Dropdown container styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Button to trigger dropdown */
+.dropdown-btn {
+  background-color: #3498db;
+  color: white;
+  padding:8px 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Dropdown content styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(44, 25, 25);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effect for links */
+.dropdown-content a:hover {
+  background-color: rgb(82, 87, 82)
+}
+
+/* Show dropdown content when dropdown is active */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.navbar {
+  justify-content: center;
+  text-align: center;
+}
+
+.navbar-nav {
+  display: flex;
+  /* Use flexbox to align items */
+  justify-content: center;
+  /* Center items horizontally */
+  align-items: center;
+  /* Align items vertically */
+  gap: 1.5rem;
+  /* Add spacing between items */
+  border: none;
+  /* Remove the red border */
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-brand img {
+  height: 50px;
+  /* Adjust image height */
+  width: auto;
+  /* Keep aspect ratio */
+}
+
+.left-space {
+  margin-left: 1rem;
+  /* Adjust space as needed */
+}
+
+.nav-link {
+  color: #fcfcfc !important;
+  /* Ensure text color is consistent */
+}
+
+.dropdown {
+  display: flex;
+  /* Flexbox to align dropdown button */
+  align-items: center;
+}
+
+.dropdown-content {
+  top: 100%;
+  /* Position dropdown below the button */
+  left: 0;
+}
+.nav-link {
+  color: #fcfcfc !important;
+  /* Ensure the color is consistent */
+  position: relative;
+  /* Positioning for the underline */
+  text-decoration: none;
+  /* Remove default underline */
+}
+
+.nav-link::after {
+  content: "";
+  /* Pseudo-element for the underline */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  /* Start with no width */
+  height: 2px;
+  /* Thickness of the underline */
+  background-color: #fcfcfc;
+  /* Color of the underline */
+  transition: width 0.3s ease-in-out;
+  /* Smooth transition */
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  /* Expand underline on hover */
+}
+
+.border-top{
+margin-top: 0px !important;
+padding-top: 0px !important;
+margin-bottom: 0px !important;
+height: 10px;
+border: none;
+background: rgb(115,7,66);
+background: linear-gradient(84deg, rgba(115,7,66,1) 0%, rgba(230,36,154,1) 0%, rgba(11,207,212,1) 100%, rgba(94,94,94,1) 100%);
+} 
