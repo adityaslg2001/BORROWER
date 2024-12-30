@@ -1,0 +1,104 @@
+.features-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f0f4f8; 
+
+    border-top: 2px solid #ddd;
+  }
+  
+  .features-section .features-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 50px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  
+  .features-section .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .features-section .feature-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 350px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transform: scale(1);
+  }
+  
+  .features-section .feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .features-section .icon-container {
+    background-color: #ff68f0;
+    border-radius: 50%;
+    padding: 20px;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .features-section .icon-container:hover {
+    background-color: #d156c6;
+  }
+  
+  .features-section .feature-icon {
+    font-size: 2.5rem;
+  }
+  
+  .features-section .feature-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .features-section .feature-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+  
+  
+  
+  .features-section .feature-card:hover .feature-description {
+    color: #ff68f0;
+  }
+  
+  @media (max-width: 768px) {
+    .features-section .features-title {
+      font-size: 2rem;
+    }
+  
+    .features-section .feature-card {
+      padding: 20px;
+    }
+  
+    .features-section .icon-container {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .features-section .feature-icon {
+      font-size: 2rem;
+    }
+  }
+  
