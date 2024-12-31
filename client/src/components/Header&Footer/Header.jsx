@@ -60,7 +60,6 @@ function Header() {
                     <a href='#option2'>Option 2</a>
                     <a href='#option3'>Option 3</a>
                   </div>
-                  
                 </a>
               </li>
               

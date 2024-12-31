@@ -17,25 +17,34 @@ function ConfirmationModal({ show, onHide, onConfirm }) {
     <Modal
       show={show}
       onHide={onHide}
-      size="none"
+      size="md"
       aria-labelledby="contained-modal-title-vcenter"
       centered
+      className="confirmation-modal"
     >
-      <Modal.Header closeButton className="log-out-modal">
-        <Modal.Title id="contained-modal-title-vcenter">
-          Confirm Logout
+      <Modal.Header closeButton className="modal-header">
+        <Modal.Title id="contained-modal-title-vcenter" className="modal-title">
+          Ready to Leave?
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        <h3 className="danger-text">Are you sure you want to log out?</h3>
-        <p className="modal-para">You will need to log back in to access your account.</p>
+      <Modal.Body className="modal-body">
+        <p className="modal-text">
+          You're about to log out from your account. Don't worry, your progress is saved, and you can log back in anytime.
+        </p>
+        <p className="modal-subtext">
+          If you didn't mean to click this, simply cancel and continue exploring!
+        </p>
       </Modal.Body>
-      <Modal.Footer className="log-out-modal">
-        <Button variant="secondary" onClick={onHide} className="cancel-btn">
-          Cancel
+      <Modal.Footer className="modal-footer">
+        <Button variant="outline-light" onClick={onHide} className="cancel-btn">
+          Stay Logged In
         </Button>
-        <Button variant="danger" onClick={onConfirm} className="danger-danger-btn">
-          Log Out
+        <Button
+          variant="gradient"
+          onClick={onConfirm}
+          className="confirm-btn"
+        >
+          Yes, Log Me Out
         </Button>
       </Modal.Footer>
     </Modal>

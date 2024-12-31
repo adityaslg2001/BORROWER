@@ -41,7 +41,11 @@ export default function Features() {
       title: "Save and Earn",
       description: "Save money by borrowing or earn by lending items you no longer use.",
     },
-    
+    {
+      icon: faGlobe,
+      title: "Sustainable Living",
+      description: "Promote sustainability by reusing and sharing items instead of buying new ones.",
+    },
     {
       icon: faComments,
       title: "Real-Time Chat",

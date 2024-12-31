@@ -1,0 +1,380 @@
+.aboutUsBody {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  cursor: default;
+}
+
+.heroSection {
+  background: linear-gradient(135deg, #1a73e8, #ff68f0);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position: relative;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #f9f9f9;
+}
+.fat-arrow {
+  font-size: 1.6rem; 
+  font-weight: 900;
+  margin-left: 0.5rem; 
+  color: #ff68f0; 
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.ctaButton {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.ctaButton:hover {
+  background: #f9f9f9;
+  color: #333;
+  border: 2px solid white;
+  transform: translateY(-3px);
+}
+
+.aboutUsTitle {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.teamSection {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ffffff, #f7f8fc);
+  text-align: center;
+}
+
+.teamTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.teamGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.customCard {
+  max-width: 300px;
+  text-align: center;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+}
+
+.customCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px auto 15px;
+  border: 2px dashed rgb(0, 0, 0);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: #666666;
+  line-height: 1.5;
+}
+
+
+.cardLinks {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+
+.cardLink {
+  font-size: 0.9rem;
+  color: #1a73e8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cardLink:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
+.aboutUsBodyRevamped {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.aboutUsContentWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  max-width: 1200px;
+  margin-bottom: 30px;
+}
+
+.aboutUsTextContainer {
+  flex: 1;
+  text-align: left;
+}
+
+.aboutUsTitle {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.aboutUsDescription {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.learnMoreButton {
+  font-size: 1rem;
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.learnMoreButton:hover {
+  border: 2px solid #007bff;
+  background: transparent;
+  color: #007bff;
+}
+
+.aboutUsCompanyContainer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 60px;
+}
+
+/* .aboutUsImageWrapper {
+  width: 50%;
+  max-width: 1200px;
+  margin-top: 20px;
+} */
+
+.aboutUsImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.aboutUsImageWrapper {
+  width: 50%;
+  cursor: default;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6); 
+  border-radius: 50px; 
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.monitizeTextContainer {
+  text-align: left;
+  color: #ffffff; 
+  font-family: 'Poppins', sans-serif; 
+  padding-left: 40px; 
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.monetizeYourBelongings {
+  display: block;
+  font-size: 60px; 
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px; 
+  background: linear-gradient(90deg, #ffcc00, #ff6600);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 6px rgba(255, 165, 0, 0.6); 
+  margin-bottom: 25px; 
+}
+
+.solutionGuide {
+  display: block;
+  font-size: 24px;
+  color: #ddd; 
+  letter-spacing: 1.5px; 
+  background: linear-gradient(215deg, #eeeeee, #999999); 
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.3);
+  padding-top: 5px;
+}
+
+
+.aboutUsImageWrapper:hover {
+  transform: scale(1.05); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8); 
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.companyCard {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.cardHeaderSection {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.companyTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.cardBodySection {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.cardFooterSection {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.githubButton {
+  font-size: 1rem;
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.githubButton:hover {
+  background-color: rgb(207, 2, 2);
+  color: #ffffff;
+}
+
+.technologyFooter {
+  background-color: #f8f9fa;
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.technologyLogos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.techIcon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.techIcon:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+}

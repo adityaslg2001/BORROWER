@@ -1,21 +1,28 @@
-import React from 'react'
-
+import React from "react";
 import Card from "react-bootstrap/Card";
-import CardGroup from "react-bootstrap/CardGroup";
-export default function CustomCard() {
+import CardLink from "react-bootstrap/CardLink";
+import styles from "./AboutUs.module.css";
+import { faUnderline } from "@fortawesome/free-solid-svg-icons";
+
+export default function CustomCard({ name, description, linkedIn, github, image }) {
   return (
-    <Card>
-      <Card.Img variant='top' src='holder.js/100px160' />
+    <Card className={styles.customCard}>
+      <div className={styles.imageContainer}>
+        <Card.Img variant="top" src={image} className={styles.profileImage} />
+      </div>
       <Card.Body>
-        <Card.Title>Ronit Kumar Baranwal</Card.Title>
-        <Card.Text>
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.
-        </Card.Text>
+        <Card.Title className={styles.cardTitle}>{name}</Card.Title>
+        <Card.Text className={styles.cardDescription}>{description}</Card.Text>
       </Card.Body>
-      <Card.Footer>
-        <small className='text-muted'>Last updated 3 mins ago</small>
-      </Card.Footer>
+      <div className={styles.cardLinks}>
+        <CardLink href={linkedIn} target="_blank" className={styles.cardLink}>
+          LinkedIn
+        </CardLink>
+        <span>|</span>
+        <CardLink href={github} target="_blank" className={styles.cardLink}>
+          GitHub
+        </CardLink>
+      </div>
     </Card>
   );
 }
