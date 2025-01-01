@@ -10,6 +10,10 @@ import Home from "./home/Home.jsx";
 import ProtectedRoute from "./protectedRoutes.jsx";
 import 'font-awesome/css/font-awesome.min.css';
 import ErrorPage from "./error/ErrorPage.jsx";
+import Privacy from "./contactUs/Privacy.jsx";
+import Disclaimer from "./contactUs/Disclaimer.jsx";
+import TermsOfService from "./contactUs/TermsOfService.jsx";
+import Careers from "./contactUs/Careers.jsx";
 
 function App1() {
   return (
@@ -20,7 +24,12 @@ function App1() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/contactus" element={<ContactUs/> } />
         <Route path="/aboutus" element={<AboutUs/> } />
-        
+        <Route path="/privacy-policy" element={<Privacy/>} /> 
+        <Route path="/disclaimer" element={<Disclaimer/>} />
+        <Route path="/terms-of-service" element={< TermsOfService/>} /> 
+        <Route path="/careers" element={<Careers/>} />
+
+       
         <Route path="/home"
           element={
             <ProtectedRoute>

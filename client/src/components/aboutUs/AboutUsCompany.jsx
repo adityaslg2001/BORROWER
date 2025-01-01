@@ -9,7 +9,7 @@ export default function AboutUsCompany() {
     window.open("https://github.com/RonitBaranwal/Borrower", "_blank");
   };
 
-  return (
+  return(
     <Card className={styles.companyCard}>
       <Card.Body>
         <div className={styles.cardHeaderSection}>

@@ -65,12 +65,15 @@
   white-space: nowrap;
   font-weight: 600;
   font-size: 19px;
+  margin: 5px;
+  /* border-width: 2px; */
+  /* border: 2px dotted black; */
 
 }
 
 .dropdown-menu ul li:hover {
 
-  background-color: #f8f8f8;
+  background-color: #f8f6f6;
   border: 2px dotted black;
   border-radius: 10px;
 
