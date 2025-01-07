@@ -18,7 +18,7 @@ const api = process.env.YOUR_API_KEY;
 // console.log(api)
 const mongoose = require("mongoose");
 // mongoose.connect("api");
-mongoose.connect("mongodb://localhost:27017/LIO_AUTH");
+mongoose.connect("mongodb://localhost:27017/borrower");
 
 //Schema for users tabl
 
