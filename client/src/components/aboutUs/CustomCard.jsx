@@ -19,7 +19,7 @@ export default function CustomCard({ name, description, linkedIn, github, image 
           LinkedIn
         </CardLink>
         <span>|</span>
-        <CardLink href={github} target="_blank" className={styles.cardLink}>
+        <CardLink href={github} target="_blank" className={styles.cardLink2}>
           GitHub
         </CardLink>
       </div>

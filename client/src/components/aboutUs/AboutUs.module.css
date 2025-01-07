@@ -131,14 +131,19 @@
   font-size: 0.95rem;
   color: #666666;
   line-height: 1.5;
+  
 }
 
 
 .cardLinks {
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  justify-content: space-around;
+  flex: 1;
+  /* gap: 15px; */
   margin-bottom: 15px;
+  border: 1px solid gray;
+  border-style: dashed;
+  border-radius: 10px;
 }
 
 
@@ -147,11 +152,40 @@
   color: #1a73e8;
   text-decoration: none;
   transition: color 0.3s ease;
+  flex: 0.5;
+  border-radius: 10px;
 }
 
 .cardLink:hover {
-  color: #0d47a1;
+  background-color: #0d47a1;
+  color: white;
+  border-radius: 10px;
   text-decoration: underline;
+  span{
+    background-color: #0d47a1;
+    color: white;
+  }
+}
+
+.cardLink2 {
+  font-size: 0.9rem;
+  color: #1a73e8;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: color 0.3s ease;
+  flex: 0.5;
+}
+
+.cardLink2:hover {
+  background-color: black;
+  color: white;
+  flex: 0.5;
+  border-radius: 10px;
+  text-decoration: underline;
+  span{
+    background-color: black;
+    color: white;
+  }
 }
 
 .aboutUsBodyRevamped {
