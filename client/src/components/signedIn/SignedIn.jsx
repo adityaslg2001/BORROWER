@@ -60,6 +60,8 @@ export default function SignedIn({ username }) {
       navigate("/error");
     }
   }, [storedUsername, navigate]);
+
+  
   
   if (!storedUsername || storedUsername==="") {
     // navigate("/error");
@@ -80,9 +82,11 @@ export default function SignedIn({ username }) {
     localStorage.removeItem("token"); 
     sessionStorage.removeItem("token"); 
 
-    
     navigate("/login"); 
   };
+  const navigateToAddProductPage = () =>{
+    navigate("/home/addProduct"); 
+  }
   
 
   return (
@@ -96,7 +100,7 @@ export default function SignedIn({ username }) {
             <li><FontAwesomeIcon icon={faUser} className="move-right"/>Profile</li>
             <li><FontAwesomeIcon icon={faShop} className="move-right"/>Orders</li>
             <li><FontAwesomeIcon icon={faList} className="move-right"/>Listings</li>
-            <li style={{ color:"rgb(212, 0, 0)", fontWeight:"bold"}}><FontAwesomeIcon icon={faPlus} className="move-right"/>Add Product</li>
+            <li onClick={navigateToAddProductPage} style={{ color:"rgb(212, 0, 0)", fontWeight:"bold"}}><FontAwesomeIcon icon={faPlus} className="move-right"/>Add Product</li>
             <li onClick={() => setModalShow(true)}><FontAwesomeIcon icon={faRightFromBracket} className="move-right"/>Sign Out</li>
           </ul>
         </div>

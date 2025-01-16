@@ -14,6 +14,7 @@ import Privacy from "./contactUs/Privacy.jsx";
 import Disclaimer from "./contactUs/Disclaimer.jsx";
 import TermsOfService from "./contactUs/TermsOfService.jsx";
 import Careers from "./contactUs/Careers.jsx";
+import AddProduct from "./addProduct/AddProduct.jsx";
 
 function App1() {
   return (
@@ -37,6 +38,8 @@ function App1() {
             </ProtectedRoute>
           }
         />
+
+        <Route path="/home/addProduct" element={<AddProduct/>} />
         
 
         <Route path="/error" element={<ErrorPage/> } />

@@ -1,0 +1,136 @@
+/* AddProduct.css */
+.add-product-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background: black;
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .add-product-container .add-product-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  
+  .add-product-container .add-product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .add-product-container .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-product-container label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 8px;
+  }
+  
+  .add-product-container input,
+  .add-product-container textarea,
+  .add-product-container select {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+  }
+  
+  .add-product-container input:focus,
+  .add-product-container textarea:focus,
+  .add-product-container select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+  }
+  
+  .add-product-container textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .add-product-container .add-product-button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+  }
+  
+  .add-product-container .add-product-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  .add-product-container .add-product-button:active {
+    transform: translateY(0);
+  }
+  
+  /* AddProduct.css */
+.add-product-container .image-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px dashed #cccccc;
+    transition: border-color 0.3s;
+  }
+  
+  .add-product-container .image-upload-container:hover {
+    border-color: #0056b3;
+  }
+  
+  .add-product-container .image-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: #fafafa;
+  }
+  
+  .add-product-container .image-preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+  }
+  
+  .add-product-container .image-preview img:hover {
+    transform: scale(1.05);
+  }
+  
+  .add-product-container .image-upload-label {
+    color: #555555;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .add-product-container .image-upload-input {
+    display: none;
+  }
+  

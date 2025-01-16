@@ -1,0 +1,10 @@
+/* Style for the image */
+.avatar-img {
+    width: 120px;           /* Set width */
+    height: 120px;          /* Set height */
+    object-fit: cover;      /* Ensures the image covers the space without distortion */
+    border: 2px solid white; /* Border color */
+    border-radius: 50%;     /* Makes the image circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+    object-fit: cover;
+}

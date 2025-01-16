@@ -19,50 +19,58 @@ export default function Features() {
     {
       icon: faUsers,
       title: "Community Marketplace",
-      description: "Connect with people nearby for buying, selling, lending, and borrowing items.",
+      description: "Connect with people nearby to buy, sell, lend, or borrow items.",
+      // gradient: "linear-gradient(45deg, #fbc7d4, #9796f0)",
     },
     {
       icon: faHandshake,
       title: "Secure Transactions",
-      description: "Trade confidently with our secure payment and trade facilitation systems.",
+      description: "Trade confidently with secure payments and facilitation.",
+      // gradient: "linear-gradient(45deg, #fbc7d4, #9796f0)",
     },
     {
       icon: faMapMarkerAlt,
       title: "Localized Trades",
-      description: "Find people in your area to trade items quickly and conveniently.",
+      description: "Find neighbors to trade items quickly and conveniently.",
+      // gradient: "linear-gradient(45deg, #fbc7d4, #9796f0)",
     },
     {
       icon: faBoxOpen,
       title: "Diverse Listings",
-      description: "Explore a wide range of items, from gadgets to household goods, all in one place.",
+      description: "Explore gadgets, furniture, books, and more in one place.",
+      // gradient: "linear-gradient(45deg, #fbc7d4, #9796f0)",
     },
     {
       icon: faPiggyBank,
-      title: "Save and Earn",
-      description: "Save money by borrowing or earn by lending items you no longer use.",
+      title: "Save & Earn",
+      description: "Save by borrowing or earn by lending unused items.",
+      // gradient: "linear-gradient(45deg, #fbc7d4, #9796f0)",
     },
     {
       icon: faGlobe,
       title: "Sustainable Living",
-      description: "Promote sustainability by reusing and sharing items instead of buying new ones.",
+      description: "Promote sustainability by sharing instead of buying.",
+      // gradient: "linear-gradient(45deg, #fbc7d4, #9796f0)",
     },
     {
       icon: faComments,
       title: "Real-Time Chat",
-      description: "Communicate instantly with buyers and sellers to negotiate, ask questions, and finalize deals.",
+      description: "Negotiate, ask questions, and finalize deals instantly.",
+      // gradient: "linear-gradient(45deg, #fbc7d4, #9796f0)",
     },
     {
       icon: faClock,
       title: "Expiration Tracking",
-      description: "Keep track of lending and borrowing expiration dates to ensure timely returns and avoid disputes.",
+      description: "Keep track of borrowing deadlines with ease.",
+      // gradient: "linear-gradient(45deg, #fbc7d4, #9796f0)",
     },
     {
       icon: faStar,
-      title: "Item Rating & Review",
-      description: "Rate and review items and transactions to help the community make informed decisions.",
-    }
+      title: "Rating & Review",
+      description: "Rate items and users to foster trust in the community.",
+      // gradient: "linear-gradient(45deg, #fbc7d4, #9796f0)",
+    },
   ];
-
   return (
     <div className="features-container ">
       <header className="py-5 text-center center-1">
@@ -83,20 +91,30 @@ export default function Features() {
         </div>
       </header>
 
-      <section className="features-section">
-        <h2 className="features-title">Why Choose Us?</h2>
-        <div className="features-grid">
-          {features.map((feature, index) => (
-            <div className="feature-card" key={index}>
-              <div className="icon-container">
-                <FontAwesomeIcon icon={feature.icon} className="feature-icon" />
-              </div>
-              <h3 className="feature-title">{feature.title}</h3>
-              <p className="feature-description">{feature.description}</p>
-            </div>
-          ))}
+      <section className="features-section next-gen">
+      <div className="features-title-container">
+      <h2 className="features-title">Why Choose Us?</h2>
+      </div>
+      <div className="features-grid">
+        {features.map((feature, index) => (
+          <div
+            className="feature-card next-level"
+            key={index}
+            style={{
+              background: feature.gradient,
+              color: "#fff",
+          
+              padding: "25px",
+              textAlign: "center",
+            }}
+          >
+            <FontAwesomeIcon icon={feature.icon} className="feature-icon enhanced-icon" />
+            <h3 className="feature-title">{feature.title}</h3>
+            <p className="feature-description">{feature.description}</p>
+          </div>
+        ))}
         </div>
-      </section>
+    </section>
     </div>
   );
 }

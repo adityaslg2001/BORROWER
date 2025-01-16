@@ -4,6 +4,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import Header from '../Header&Footer/Header';
 import HomeHeader from '../home/HomeHeader';
 import { LinearGradient } from 'react-text-gradients';
+import Footer from '../Header&Footer/Footer';
 
 
 const ContactUs = () => {
@@ -102,16 +103,8 @@ const ContactUs = () => {
         </section>
       </div>
     </div>
-    <footer className="contact-footer">
-        <div className="footer-links">
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/disclaimer">Disclaimer</a>
-          <a href="/terms-of-service">Terms of Service</a>
-          <a href="/careers">Careers</a>
-        </div>
-        <hr></hr>
-        <p>© {new Date().getFullYear()} Borrower. Built for community.</p>
-      </footer>
+    
+    <Footer/>
     </>
   );
 };

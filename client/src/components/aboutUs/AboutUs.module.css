@@ -141,8 +141,9 @@
   flex: 1;
   /* gap: 15px; */
   margin-bottom: 15px;
-  border: 1px solid gray;
-  border-style: dashed;
+  padding: 5px;
+  border-top: 1px dashed gray;
+  /* border-style: dashed; */
   border-radius: 10px;
 }
 
