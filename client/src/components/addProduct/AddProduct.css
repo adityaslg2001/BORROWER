@@ -1,136 +1,101 @@
-/* AddProduct.css */
 .add-product-container {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 40px;
-    background: black;
-    color: white;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .add-product-container .add-product-title {
-    font-size: 2.5rem;
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 25px;
-    font-weight: 700;
-  }
-  
-  .add-product-container .add-product-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .add-product-container .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .add-product-container label {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #34495e;
-    margin-bottom: 8px;
-  }
-  
-  .add-product-container input,
-  .add-product-container textarea,
-  .add-product-container select {
-    padding: 12px 15px;
-    font-size: 1rem;
-    border: 1px solid #dfe6e9;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
-  }
-  
-  .add-product-container input:focus,
-  .add-product-container textarea:focus,
-  .add-product-container select:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
-  }
-  
-  .add-product-container textarea {
-    resize: none;
-    height: 100px;
-  }
-  
-  .add-product-container .add-product-button {
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    color: #ffffff;
-    background-color: #3498db;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s ease-in-out;
-  }
-  
-  .add-product-container .add-product-button:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
-  }
-  
-  .add-product-container .add-product-button:active {
-    transform: translateY(0);
-  }
-  
-  /* AddProduct.css */
-.add-product-container .image-upload-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    background-color: #f8f8f8;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+}
+
+.add-product-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-product-form .form-group {
+  margin-bottom: 15px;
+}
+
+.add-product-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.add-product-form input,
+.add-product-form textarea,
+.add-product-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.add-product-form input:focus,
+.add-product-form textarea:focus,
+.add-product-form select:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+.add-product-form textarea {
+  resize: none;
+}
+
+.submit-button {
+  background: #6c63ff;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #5348c8;
+}
+
+.image-preview {
+  border: 2px dotted black;
+  background-color: #c2bfff;
+  margin-top: 10px;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 768px) {
+  .add-product-container {
     padding: 20px;
-    border-radius: 15px;
-    border: 2px dashed #cccccc;
-    transition: border-color 0.3s;
   }
-  
-  .add-product-container .image-upload-container:hover {
-    border-color: #0056b3;
+
+  .add-product-container .add-product-title {
+    font-size: 1.8rem;
   }
-  
-  .add-product-container .image-preview {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 20px;
-    justify-content: center;
-    border: 1px solid #e0e0e0;
-    padding: 15px;
-    border-radius: 12px;
-    background-color: #fafafa;
+
+  .add-product-container .form-group input,
+  .add-product-container .form-group textarea,
+  .add-product-container .form-group select {
+    font-size: 0.9rem;
   }
-  
-  .add-product-container .image-preview img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease;
-  }
-  
-  .add-product-container .image-preview img:hover {
-    transform: scale(1.05);
-  }
-  
-  .add-product-container .image-upload-label {
-    color: #555555;
+
+  .add-product-container .submit-button {
     font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: underline;
   }
-  
-  .add-product-container .image-upload-input {
-    display: none;
-  }
-  
+}

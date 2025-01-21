@@ -15,6 +15,7 @@ import Disclaimer from "./contactUs/Disclaimer.jsx";
 import TermsOfService from "./contactUs/TermsOfService.jsx";
 import Careers from "./contactUs/Careers.jsx";
 import AddProduct from "./addProduct/AddProduct.jsx";
+import YourListings from "./yourListings/YourListings.jsx";
 
 function App1() {
   return (
@@ -40,7 +41,7 @@ function App1() {
         />
 
         <Route path="/home/addProduct" element={<AddProduct/>} />
-        
+        <Route path="/home/yourListings" element={<YourListings/>} />
 
         <Route path="/error" element={<ErrorPage/> } />
       </Routes>

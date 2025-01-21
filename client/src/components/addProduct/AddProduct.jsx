@@ -1,83 +1,204 @@
 import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "./AddProduct.css";
-import Footer from "../Header&Footer/Footer";
-import HomeHeader from "../home/HomeHeader";
 
+const categories = [
+  "Electronics",
+  "Furniture",
+  "Books",
+  "Appliances",
+  "Sports Gear",
+  "Clothing",
+  "Toys",
+  "Decor",
+  "Outdoor Equipment",
+  "Kitchen Tools",
+  "Bikes",
+  "Tools & Hardware",
+  "Gaming",
+  "Gardening",
+  "Art Supplies",
+  "Pet Supplies",
+  "Fitness",
+  "Tech Accessories",
+  "Photography",
+  "Travel Gear",
+];
 
 const AddProduct = () => {
-  const [imagePreviews, setImagePreviews] = useState([]);
+  const [formData, setFormData] = useState({
+    name: "",
+    price: "",
+    description: "",
+    category: "",
+    image: null,
+    pincode: "",
+    phone: "",
+  });
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const navigate = useNavigate();
+  const username = localStorage.getItem("username");
   const handleImageChange = (e) => {
-    const files = Array.from(e.target.files);
-    const previews = files.map((file) => URL.createObjectURL(file));
-    setImagePreviews(previews);
+    const file = e.target.files[0];
+    if (file) {
+      const previewURL = URL.createObjectURL(file);
+      setFormData({ ...formData, image: file, imagePreview: previewURL });
+    }
+  };
 
-    // Cleanup object URLs when component unmounts
-    return () => previews.forEach((url) => URL.revokeObjectURL(url));
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Prepare FormData to send to backend
+    const data = new FormData();
+    data.append("name", formData.name);
+    data.append("price", formData.price);
+    data.append("description", formData.description);
+    data.append("category", formData.category);
+    data.append("pincode", formData.pincode);
+    data.append("phone", formData.phone);
+    data.append("username", username);
+    data.append("image", formData.image); // Add the image file
+
+    try {
+      const response = await axios.post("http://localhost:5000/home/addProduct", data, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      
+
+      console.log(response.data);
+      alert("Product added successfully!");
+      // Clear the form fields
+      setFormData({
+        name: "",
+        price: "",
+        description: "",
+        category: "",
+        image: null,
+        imagePreview: "",
+        pincode: "",
+        phone: "",
+      });
+
+      // Navigate to /yourListings
+      navigate("/home/yourListings");
+      
+    } catch (error) {
+      console.error("Error uploading product:", error);
+      alert("Failed to upload product. Please try again.");
+    }
   };
 
   return (
-    <div>
-    <HomeHeader></HomeHeader>
     <div className="add-product-container">
-      <h2 className="add-product-title">Add a New Product</h2>
-      <form className="add-product-form">
+      <h1 className="add-product-title">Add Your Product</h1>
+      <form className="add-product-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="product-name">Product Name</label>
-          <input type="text" id="product-name" placeholder="Enter product name" />
+          <label>Product Name</label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Enter product name"
+            required
+          />
         </div>
+
         <div className="form-group">
-          <label htmlFor="product-description">Product Description</label>
-          <textarea id="product-description" placeholder="Enter product description"></textarea>
+          <label>Price (in ₹)</label>
+          <input
+            type="number"
+            name="price"
+            value={formData.price}
+            onChange={handleChange}
+            placeholder="Enter product price"
+            required
+          />
         </div>
+
         <div className="form-group">
-          <label htmlFor="product-category">Category</label>
-          <select id="product-category">
-            <option value="Electronics">Electronics</option>
-            <option value="Furniture">Furniture</option>
-            <option value="Books">Books</option>
-            <option value="Appliances">Appliances</option>
-            <option value="Sports Gear">Sports Gear</option>
-            <option value="Clothing">Clothing</option>
-            <option value="Toys">Toys</option>
-            <option value="Decor">Decor</option>
-            <option value="Outdoor Equipment">Outdoor Equipment</option>
-            <option value="Kitchen Tools">Kitchen Tools</option>
-            <option value="Bikes">Bikes</option>
-            <option value="Tools & Hardware">Tools & Hardware</option>
-            <option value="Gaming">Gaming</option>
-            <option value="Gardening">Gardening</option>
-            <option value="Art Supplies">Art Supplies</option>
-            <option value="Pet Supplies">Pet Supplies</option>
-            <option value="Fitness">Fitness</option>
-            <option value="Tech Accessories">Tech Accessories</option>
-            <option value="Photography">Photography</option>
-            <option value="Travel Gear">Travel Gear</option>
+          <label>Description</label>
+          <textarea
+            name="description"
+            value={formData.description}
+            onChange={handleChange}
+            placeholder="Enter product description"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div className="form-group">
+          <label>Product Category</label>
+          <select
+            name="category"
+            value={formData.category}
+            onChange={handleChange}
+            required
+          >
+            <option value="" disabled>
+              Select a category
+            </option>
+            {categories.map((category, index) => (
+              <option key={index} value={category}>
+                {category}
+              </option>
+            ))}
           </select>
         </div>
-        <div className="form-group image-upload-container">
-          <label htmlFor="product-images" className="image-upload-label">
-            Upload Images
-          </label>
+
+        <div className="form-group">
+          <label>Product Image</label>
           <input
             type="file"
-            id="product-images"
-            className="image-upload-input"
-            multiple
+            accept="image/*"
             onChange={handleImageChange}
+            required
           />
-          <div className="image-preview">
-            {imagePreviews.map((src, index) => (
-              <img key={index} src={src} alt={`Preview ${index + 1}`} />
-            ))}
-          </div>
+          {formData.imagePreview && (
+            <div className="image-preview">
+              <img src={formData.imagePreview} alt="Product Preview" />
+            </div>
+          )}
         </div>
-        <button type="submit" className="add-product-button">
+
+        <div className="form-group">
+          <label>Pincode of Publishing</label>
+          <input
+            type="text"
+            name="pincode"
+            value={formData.pincode}
+            onChange={handleChange}
+            placeholder="Enter pincode"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Your Phone Number</label>
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder="Enter phone number"
+            required
+          />
+        </div>
+
+        <button type="submit" className="submit-button">
           Add Product
         </button>
       </form>
-    </div>
-    <Footer></Footer>
     </div>
   );
 };

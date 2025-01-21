@@ -87,6 +87,9 @@ export default function SignedIn({ username }) {
   const navigateToAddProductPage = () =>{
     navigate("/home/addProduct"); 
   }
+  const navigateToYourListings = () =>{
+    navigate("/home/yourListings"); 
+  }
   
 
   return (
@@ -99,7 +102,7 @@ export default function SignedIn({ username }) {
           <ul>
             <li><FontAwesomeIcon icon={faUser} className="move-right"/>Profile</li>
             <li><FontAwesomeIcon icon={faShop} className="move-right"/>Orders</li>
-            <li><FontAwesomeIcon icon={faList} className="move-right"/>Listings</li>
+            <li onClick={navigateToYourListings}><FontAwesomeIcon icon={faList} className="move-right"/>Listings</li>
             <li onClick={navigateToAddProductPage} style={{ color:"rgb(212, 0, 0)", fontWeight:"bold"}}><FontAwesomeIcon icon={faPlus} className="move-right"/>Add Product</li>
             <li onClick={() => setModalShow(true)}><FontAwesomeIcon icon={faRightFromBracket} className="move-right"/>Sign Out</li>
           </ul>
